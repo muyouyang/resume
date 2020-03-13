@@ -1,0 +1,114 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+\documentclass[14pt]{resume}
+\usepackage{graphicx}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{progressbar}
+\usepackage{zh_CN-Adobefonts_external}
+\usepackage{linespacing_fix}
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\begin{multicols}{4}
+    \Large{
+        \begin{tabu}{ r }
+            \multirow{5}{1in}{
+                \includegraphics[width=0.88in]{聂韵致证件照.png}
+            }
+        \end{tabu}
+    }
+    \columnbreak
+    \Large{
+        \begin{tabu}{ l l }
+            ~\\
+            & \faBirthdayCake{1999.01.05} \\
+            & \phone{15895918878} \\
+            & \email{m15895918878@163.com} \\
+            \end{tabu}
+    }
+    \columnbreak
+    \Large{
+        \begin{tabu}{ r }
+            \multirow{5}{3.5in}{
+                \name{聂韵致}
+                \basicInfo{
+                    意向职位：视觉算法岗
+                }
+            }
+        \end{tabu}
+    }
+\end{multicols}
+
+
+% 教育背景
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{东南大学(硕士)\quad\quad\quad}{ 电子信息工程（专硕） \quad\quad\quad }}{2018.09 - 2021.06}
+\datedsubsection{\textbf{东南大学(本科)\quad\quad\quad}{ 信息工程     \quad\quad\quad\quad\quad}}{2014.09 - 2018.06}
+\textbf{2014年15岁入学东南大学；本科期间成绩优异，免试保送本专业研究生}
+% 实习经历
+\section{\faBriefcase\ 实习经历}
+\datedsubsection{\textbf{驭势科技\quad\quad}{南京AI研究院\quad\quad\quad\quad}{ 计算机视觉算法岗\quad\quad\quad}{2019.04 - 2018.09}}
+\datedsubsubsection{\textbf{项目一名称：车道线检测（在图森数据集和公司内部数据集上使用line-cnn模型进行车道线检测）\quad\quad }}
+\textbf{主要工作}
+\begin{itemize}
+    \item 对公司车道线数据集处理，本人实现包括纠正错误车道线标注类型，重叠线，断线的合并，并对车道线数量类型曲度做统计分析可视化功能；
+    \item 本人与另一同伴搭建line-cnn框架，该框架在在论文《Line-CNN end to end traffic line detection with LPU》中提出，论文并未给出开源代码。
+    本人主要负责特征提取模型选取编写以及设置anchor函数，左右下三边界anchor水平方向偏移量，有效偏移量计算函数等，以及主训练框架搭建，以及模型搭建完成后训练测试修正过程。
+\end{itemize}
+\textbf{实验改进}
+\begin{itemize}
+    \item 论文中对图森数据集准确率和FN指标为96.87\%和1.98\%，复现实际达到93.42\%和5.81\%,通过补全起始点坐标和增加anchor 类型准确率和FN到95.7\%和2.93\%基本达到论文要求。
+\end{itemize}
+
+\datedsubsubsection{\textbf{项目二名称：通用2D目标检测研究\quad\quad}}\\
+\textbf{主要工作}
+\begin{itemize}
+    \item 深入研读FasterRCNN，SSD算法代码。
+    \item 在公司数据集上研究对比了端到端训练，以及四步交替训练过程区别和结果分析，并同时研究对比了深入理解rpn模块和FasterRCNN检测模块代码，清楚掌握roi和nms模块。\item 基本复现SSD 代码。（在史建波导师指导下对目标检测基础算法进行理论研究）
+\end{itemize}
+
+% 项目经历
+\section{\faUsers\ 项目经历}
+\textbf{年报文本分类(实验室)}
+\begin{itemize}
+    \item 使用传统机器学习算法对公司年报完成行业分类
+\end{itemize}
+
+\textbf{基于LightGBM的客户信用风险预测（西南财经大学 新网银行杯 数据科学竞赛三等奖2018}
+\begin{itemize}
+    \item 根据提供的用户画像（id，行为数据等均为脱敏数据）使用LightGBM进行客户风险预测
+\end{itemize}
+
+\textbf{遥感目标检测（实验室）}
+\begin{itemize}
+    \item 针对遥感图像使用剪枝后的yolov3进行小目标检测提升准确率和flops
+\end{itemize}
+
+% 个人技能
+\section{\faCogs\ 技能}
+\begin{itemize}
+    \item 熟练掌握c++，python，熟练使用深度学习库pytorch， 以及熟练使用mysql数据分析处理
+    \item 英语雅思7
+    
+\end{itemize}
+% 个人评价
+\section{\faUniversity\ 个人评价}
+本人自学能力极强，大学前跳2级。本科通信工程培养我清楚理解信息传输及改进需求，信息安全竞赛为我提供实践平台；文本分析项目第一次接触传统机器学习和深度学习算法，自学西瓜书和实践网上项目之后获取驭势科技南京研究院实习机会；实习中十分幸运在宾大教授史建波老师的指导下，从入门计算机视觉到深入了解目标检测领域算法，锻炼代码能力，培养解决问题的思考角度。本人仍欠缺实际落地工程项目经历，希望可以在贵公司实习参与到项目产品过程中，根据实际需求具体优化检测过程中的每个步骤。
+\end{document}
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
